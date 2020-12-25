@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "Appointment App"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "Appointment App"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "Appointment App"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "Appointment App"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "Appointment App"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "Appointment App"
+        },
+        "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "Appointment App"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-7JLL8DL</Machine>
+    <WindowsUser>marti</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>73a92750-0e1f-11e7-9835-8fe6fb1a0a97</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Apache Cordova Team</PackageIdentityPublisher>
+    <IntermediateOutputPath>F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <RegisteredManifestChecksum>999DB5C667A11DFB0367384EE03A072033BD8A69BF9CF398736DF911779D24CB</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>com.ionicframework.appointmentapp899266_0.0.1.0_neutral__h35559jr9hy9m</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>com.ionicframework.appointmentapp899266_h35559jr9hy9m!com.ionicframework.appointmentapp899266</RegisteredUserModeAppID>
+    <RegisteredPackageID>com.ionicframework.appointmentapp899266</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Apache Cordova Team</RegisteredPackagePublisher>
+    <RegisteredVersion>0.0.1.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\build\windows\Debug\AnyCPU\win10\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-04T00:55:15.713</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-03-21T10:16:30.601</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-03-21T10:16:30.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <Modified>2017-03-21T10:16:30.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-03-21T10:16:30.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-03-21T10:16:30.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+      <Modified>2017-03-21T10:16:30.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-03-21T10:16:30.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-03-21T10:16:30.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-03-21T10:16:30.616</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\img\appicon.png">
+      <PackagePath>www\assets\img\appicon.png</PackagePath>
+      <Modified>2017-04-04T00:32:23.098</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\img\splashbg.png">
+      <PackagePath>www\assets\img\splashbg.png</PackagePath>
+      <Modified>2017-04-04T00:32:23.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\.gitkeep">
+      <PackagePath>www\.gitkeep</PackagePath>
+      <Modified>2017-03-21T10:16:32.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\ionicons.eot">
+      <PackagePath>www\assets\fonts\ionicons.eot</PackagePath>
+      <Modified>2017-04-04T00:32:23.024</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\ionicons.scss">
+      <PackagePath>www\assets\fonts\ionicons.scss</PackagePath>
+      <Modified>2017-04-04T00:32:23.050</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\noto-sans.scss">
+      <PackagePath>www\assets\fonts\noto-sans.scss</PackagePath>
+      <Modified>2017-04-04T00:32:23.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto.scss">
+      <PackagePath>www\assets\fonts\roboto.scss</PackagePath>
+      <Modified>2017-04-04T00:32:23.094</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\ionicons.svg">
+      <PackagePath>www\assets\fonts\ionicons.svg</PackagePath>
+      <Modified>2017-04-04T00:32:23.051</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\ionicons.ttf">
+      <PackagePath>www\assets\fonts\ionicons.ttf</PackagePath>
+      <Modified>2017-04-04T00:32:23.053</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\noto-sans-bold.ttf">
+      <PackagePath>www\assets\fonts\noto-sans-bold.ttf</PackagePath>
+      <Modified>2017-04-04T00:32:23.058</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\noto-sans-regular.ttf">
+      <PackagePath>www\assets\fonts\noto-sans-regular.ttf</PackagePath>
+      <Modified>2017-04-04T00:32:23.061</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-bold.ttf">
+      <PackagePath>www\assets\fonts\roboto-bold.ttf</PackagePath>
+      <Modified>2017-04-04T00:32:23.075</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-light.ttf">
+      <PackagePath>www\assets\fonts\roboto-light.ttf</PackagePath>
+      <Modified>2017-04-04T00:32:23.080</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-medium.ttf">
+      <PackagePath>www\assets\fonts\roboto-medium.ttf</PackagePath>
+      <Modified>2017-04-04T00:32:23.084</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-regular.ttf">
+      <PackagePath>www\assets\fonts\roboto-regular.ttf</PackagePath>
+      <Modified>2017-04-04T00:32:23.089</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\ionicons.woff">
+      <PackagePath>www\assets\fonts\ionicons.woff</PackagePath>
+      <Modified>2017-04-04T00:32:23.054</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\noto-sans-bold.woff">
+      <PackagePath>www\assets\fonts\noto-sans-bold.woff</PackagePath>
+      <Modified>2017-04-04T00:32:23.059</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\noto-sans-regular.woff">
+      <PackagePath>www\assets\fonts\noto-sans-regular.woff</PackagePath>
+      <Modified>2017-04-04T00:32:23.063</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-bold.woff">
+      <PackagePath>www\assets\fonts\roboto-bold.woff</PackagePath>
+      <Modified>2017-04-04T00:32:23.077</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-light.woff">
+      <PackagePath>www\assets\fonts\roboto-light.woff</PackagePath>
+      <Modified>2017-04-04T00:32:23.081</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-medium.woff">
+      <PackagePath>www\assets\fonts\roboto-medium.woff</PackagePath>
+      <Modified>2017-04-04T00:32:23.086</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-regular.woff">
+      <PackagePath>www\assets\fonts\roboto-regular.woff</PackagePath>
+      <Modified>2017-04-04T00:32:23.091</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\ionicons.woff2">
+      <PackagePath>www\assets\fonts\ionicons.woff2</PackagePath>
+      <Modified>2017-04-04T00:32:23.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-bold.woff2">
+      <PackagePath>www\assets\fonts\roboto-bold.woff2</PackagePath>
+      <Modified>2017-04-04T00:32:23.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-light.woff2">
+      <PackagePath>www\assets\fonts\roboto-light.woff2</PackagePath>
+      <Modified>2017-04-04T00:32:23.083</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-medium.woff2">
+      <PackagePath>www\assets\fonts\roboto-medium.woff2</PackagePath>
+      <Modified>2017-04-04T00:32:23.088</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\fonts\roboto-regular.woff2">
+      <PackagePath>www\assets\fonts\roboto-regular.woff2</PackagePath>
+      <Modified>2017-04-04T00:32:23.093</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\icon\favicon.ico">
+      <PackagePath>www\assets\icon\favicon.ico</PackagePath>
+      <Modified>2017-04-04T00:32:23.096</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\img\home-image.jpeg">
+      <PackagePath>www\assets\img\home-image.jpeg</PackagePath>
+      <Modified>2017-04-04T00:32:23.100</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\img\image1.jpeg">
+      <PackagePath>www\assets\img\image1.jpeg</PackagePath>
+      <Modified>2017-03-23T22:59:17.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\js\jquery.min.js">
+      <PackagePath>www\assets\js\jquery.min.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\assets\js\jquery.signalR.min.js">
+      <PackagePath>www\assets\js\jquery.signalR.min.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.458</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\build\main.js">
+      <PackagePath>www\build\main.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.543</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\build\polyfills.js">
+      <PackagePath>www\build\polyfills.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.551</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\build\sw-toolbox.js">
+      <PackagePath>www\build\sw-toolbox.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.552</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\cordova-js-src\confighelper.js">
+      <PackagePath>www\cordova-js-src\confighelper.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.553</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.554</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.555</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\cordova-js-src\splashscreen.js">
+      <PackagePath>www\cordova-js-src\splashscreen.js</PackagePath>
+      <Modified>2017-03-21T10:16:32.554</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+      <Modified>2017-03-21T10:16:32.570</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-calendar\www\Calendar.js">
+      <PackagePath>www\plugins\cordova-plugin-calendar\www\Calendar.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.741</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-console\www\console-via-logger.js">
+      <PackagePath>www\plugins\cordova-plugin-console\www\console-via-logger.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.743</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-console\www\logger.js">
+      <PackagePath>www\plugins\cordova-plugin-console\www\logger.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.745</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-device\src\windows\DeviceProxy.js">
+      <PackagePath>www\plugins\cordova-plugin-device\src\windows\DeviceProxy.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.746</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-device\www\device.js">
+      <PackagePath>www\plugins\cordova-plugin-device\www\device.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.748</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-splashscreen\www\splashscreen.js">
+      <PackagePath>www\plugins\cordova-plugin-splashscreen\www\splashscreen.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.749</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-splashscreen\www\windows\SplashScreenProxy.js">
+      <PackagePath>www\plugins\cordova-plugin-splashscreen\www\windows\SplashScreenProxy.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.750</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-statusbar\src\windows\StatusBarProxy.js">
+      <PackagePath>www\plugins\cordova-plugin-statusbar\src\windows\StatusBarProxy.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.751</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\cordova-plugin-statusbar\www\statusbar.js">
+      <PackagePath>www\plugins\cordova-plugin-statusbar\www\statusbar.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.752</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\plugins\ionic-plugin-keyboard\src\windows\KeyboardProxy.js">
+      <PackagePath>www\plugins\ionic-plugin-keyboard\src\windows\KeyboardProxy.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.753</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\service-worker.js">
+      <PackagePath>www\service-worker.js</PackagePath>
+      <Modified>2017-04-04T00:32:23.754</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\WinJS\js\base.js">
+      <PackagePath>www\WinJS\js\base.js</PackagePath>
+      <Modified>2017-03-21T10:16:32.100</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\build\main.css">
+      <PackagePath>www\build\main.css</PackagePath>
+      <Modified>2017-04-04T00:32:23.462</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\css\splashscreen.css">
+      <PackagePath>www\css\splashscreen.css</PackagePath>
+      <Modified>2017-03-21T10:16:32.570</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\build\main.css.map">
+      <PackagePath>www\build\main.css.map</PackagePath>
+      <Modified>2017-04-04T00:32:23.108</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\build\main.js.map">
+      <PackagePath>www\build\main.js.map</PackagePath>
+      <Modified>2017-04-04T00:32:23.122</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+      <Modified>2017-04-04T00:55:15.163</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\www\manifest.json">
+      <PackagePath>www\manifest.json</PackagePath>
+      <Modified>2017-04-04T00:32:23.738</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+      <Modified>2017-04-04T00:32:22.957</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\build\windows\Debug\AnyCPU\win10\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-04-04T00:55:15.480</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

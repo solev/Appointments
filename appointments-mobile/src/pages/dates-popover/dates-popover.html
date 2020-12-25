@@ -1,0 +1,8 @@
+<ion-list radio-group [(ngModel)]="selectedDate" (ionChange)="changeDate()" class="popover-page">
+
+  <ion-item *ngFor="let item of dates">
+    <ion-label>{{getFormattedDate(item)}}</ion-label>
+    <ion-radio value="{{item}}"></ion-radio>
+  </ion-item>
+
+</ion-list>

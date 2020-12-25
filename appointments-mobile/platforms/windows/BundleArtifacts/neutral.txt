@@ -1,0 +1,1 @@
+MainPackage=F:\Git\Projects\AppointmentApp\AppointmentApp-Mobile\platforms\windows\build\windows\Debug\AnyCPU\win10\CordovaApp.Windows10_0.0.2.0_AnyCPU_Debug.appx

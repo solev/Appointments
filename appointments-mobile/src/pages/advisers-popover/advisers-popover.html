@@ -1,0 +1,7 @@
+<ion-list>
+  <button ion-button block (tap)="finish()" color="light" [disabled]="getSelectedLength() == 0">OK</button>
+  <ion-item *ngFor="let item of advisersModel">
+    <ion-label>{{item.fullName}}</ion-label>
+    <ion-checkbox [(ngModel)]="item.checked" [disabled]="getSelectedLength() == 3 && !item.checked"></ion-checkbox>
+  </ion-item>
+</ion-list>

@@ -1,0 +1,28 @@
+page-home {
+    .item-profile {
+    width: 100%;
+    background-image: url('../assets/img/home-image.jpeg');
+    background-position: center center;
+    background-size: cover;    
+  }
+
+  .main-menu-button{
+      height: 30vw;
+      width: 100%;
+  }
+
+  .square {
+    width: 100% !important;
+    height:0 !important;
+    padding: 0 0 100% 0 !important;
+}
+
+  .grid{
+      padding-left:0!important;
+      padding-right: 0!important;
+  }
+
+  .row [col-6]:first-child{
+      padding-left: 0!important;         
+  }
+}

@@ -1,0 +1,26 @@
+page-appointments {
+    ion-grid > ion-row > ion-col{
+        border-right: 1px solid lightgray;
+    }
+    ion-grid > ion-row> ion-col:last-child{
+        border-right: none;
+    }
+    ion-grid > ion-row {
+        border-bottom: 1px solid lightgray;
+    }
+
+    ion-col{
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .appointmentButton{
+        width: 25px;
+        height: 25px;
+    }
+
+    .timeButton  ion-icon {
+        font-size: 1.75em;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,67 @@
+<ion-content scroll="false">
+  <div class="splash-bg">
+    <h2>Appointment App</h2>
+  </div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro">
+      Sign Up
+    </div>
+  </div>
+  <div padding>
+    <form (submit)="doSignup()" #registerForm="ngForm">
+      <ion-list>
+
+        <ion-item>
+          <ion-label stacked>Name</ion-label>
+          <ion-input type="text" [(ngModel)]="account.name" name="name" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Surname</ion-label>
+          <ion-input type="text" [(ngModel)]="account.surname" name="surname" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="account.emailAddress" name="emailAddress" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Username</ion-label>
+          <ion-input type="text" [(ngModel)]="account.username" name="username" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Phone Number</ion-label>
+          <ion-input type="text" [(ngModel)]="account.phone" name="phone" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="account.password" name="password" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Confirm Password</ion-label>
+          <ion-input type="password" [(ngModel)]="account.confirmPassword" name="confirmPassword" required></ion-input>
+        </ion-item>
+
+        <div padding>
+          <button ion-button [disabled]="!registerForm.valid" color="primary" block>Sign Up</button>
+        </div>
+
+
+        <div padding text-center>
+          <p>{{message}}</p>          
+        </div>
+
+      </ion-list>
+    </form>
+
+    <div text-center>
+      <p>Already have an account? &nbsp; <a (tap)="login()">Sign in</a></p>
+    </div>
+  </div>
+
+</ion-content>
