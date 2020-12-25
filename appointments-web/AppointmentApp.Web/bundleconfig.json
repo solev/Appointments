@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "Theme/dist/js/app.min.js",
+    "inputFiles": [
+      "Theme/dist/js/app.js"
+    ]
+  }
+]

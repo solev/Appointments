@@ -1,0 +1,123 @@
+﻿@using Abp.Authorization.Users
+
+<div id="editUserModal">
+    <form name="tenantCreateForm" role="form" novalidate class="form-validation">
+        <div class="modal-header">
+            <h4 class="modal-title">
+                <span>@L("EditUser"): {{user.userName}}</span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Custom Tabs -->
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab_1" data-toggle="tab">User Information</a></li>
+                            <li><a href="#tab_2" data-toggle="tab">Roles <span class="badge bg-light-blue">{{UserRolesCount()}}</span></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                                    Dropdown <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                                    <li role="presentation" class="divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                            <li class="pull-right"><a href="javascript:void(0)" class="text-muted"><i class="fa fa-gear"></i></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab_1">
+                                <div class="row">
+                                    <div class="col-sm-4 text-center">
+                                        <img @*ng-src="{{user.imageUrl}}"*@ src="/Theme/dist/img/user2-160x160.jpg" width="128" height="128" class="img-thumbnail img-rounded img-circle ng-scope">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-group form-md-line-input form-md-floating-label no-hint" ng-class="{'has-error': tenantCreateForm.Name.$error.required}">
+                                            <label>@L("Name")</label>
+                                            <input type="text" name="Name" class="form-control" ng-model="user.name" required maxlength="@AppointmentApp.Users.User.MaxNameLength">
+                                        </div>
+                                        <div class="form-group form-md-line-input form-md-floating-label no-hint" ng-class="{'has-error': tenantCreateForm.Surname.$error.required}">
+                                            <label>@L("Surname")</label>
+                                            <input type="text" name="Surname" class="form-control" ng-model="user.surname" required maxlength="@AppointmentApp.Users.User.MaxSurnameLength">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-md-line-input form-md-floating-label no-hint" ng-class="{'has-error':tenantCreateForm.EmailAddress.$error.email}">
+                                    <label>@L("EmailAddress")</label>
+                                    <input type="email" name="EmailAddress" class="form-control" ng-model="user.emailAddress" overwrite-email required maxlength="@AppointmentApp.Users.User.MaxEmailAddressLength">
+
+                                </div>
+                                <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                                    <label>@L("Username")</label>
+                                    <input type="text" name="Username" class="form-control" ng-model="user.userName" readonly required maxlength="@AppointmentApp.Users.User.MaxUserNameLength">
+                                </div>
+                                @*<div class="form-group form-md-line-input form-md-floating-label no-hint">
+                                    <div class="checkbox icheck">
+                                        <label>
+                                            <input type="checkbox" ng-model="user.setRandomPassword" i-check> <span class="pad">Set Random Password</span>
+                                        </label>
+                                    </div>
+                                </div>*@
+
+                                @*<div class="form-group form-md-line-input form-md-floating-label no-hint" ng-if="!user.setRandomPassword">
+                                    <label>@L("Password")</label>
+                                    <input type="password" name="Password" class="form-control" ng-model="user.password" maxlength="@AppointmentApp.Users.User.MaxPasswordLength">
+                                </div>
+                                <div class="form-group form-md-line-input form-md-floating-label no-hint" ng-class="{'has-error':tenantCreateForm.ConfirmPassword.$error.compareTo}" ng-if="!user.setRandomPassword">
+                                    <label>@L("ConfirmPassword")</label>
+                                    <input type="password" name="ConfirmPassword" class="form-control" ng-model="user.confirmPassword" compare-to="user.password" maxlength="@AppointmentApp.Users.User.MaxPasswordLength">
+                                </div>*@
+                                <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                                    <div class="checkbox icheck">
+                                        <label>
+                                            <input type="checkbox" ng-model="user.isActive" i-check> <span class="pad">Active</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                </div><!-- /.tab-pane -->
+                                <div class="tab-pane" id="tab_2">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="checkbox icheck" ng-repeat="Role in Roles">
+                                                <label>
+                                                    <input type="checkbox" ng-model="Role.selected" i-check> <h4 class="inline margin"> {{Role.displayName}} </h4>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.tab-pane -->
+                            </div><!-- /.tab-content -->
+                        </div><!-- nav-tabs-custom -->
+                    </div><!-- /.col -->
+                </div>
+                @*<div class="form-group form-md-line-input form-md-floating-label no-hint">
+                        <label>@L("TenancyName")</label>
+                        <input auto-focus class="form-control" type="text" name="TenancyName" ng-model="vm.tenant.tenancyName" required maxlength="@Tenant.MaxTenancyNameLength" ng-pattern="/@Tenant.TenancyNameRegex/">
+                    </div>
+                    <div>
+                        <span class="help-block text-danger" ng-show="!tenantCreateForm.TenancyName.$valid && tenantCreateForm.TenancyName.$dirty">@L("TenantName_Regex_Description")</span>
+                    </div>
+
+                    <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                        <label>@L("Name")</label>
+                        <input type="text" name="Name" class="form-control" ng-model="vm.tenant.name" required maxlength="@Tenant.MaxNameLength">
+                    </div>
+
+                    <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                        <label>@L("AdminEmailAddress")</label>
+                        <input type="email" name="AdminEmailAddress" class="form-control" ng-model="vm.tenant.adminEmailAddress" required maxlength="@SiGotvime.Users.User.MaxEmailAddressLength">
+                    </div>
+
+                    <p>@L("DefaultPasswordIs", SiGotvime.Users.User.DefaultPassword)</p>*@
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="cancel()">@L("Cancel")</button>
+                <button type="submit" class="btn btn-primary blue" ng-click="save()" ng-disabled="tenantCreateForm.$invalid || saving"><i class="fa fa-save"></i> <span>@L("Save")</span></button>
+            </div>
+    </form>
+</div>

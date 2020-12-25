@@ -1,0 +1,107 @@
+﻿@using AppointmentApp.Web.Models.Adviser
+@model GetAppointmentSlotsViewModel
+
+@{
+    Layout = null;
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Time</td>
+            @foreach (var item in Model.Dates)
+            {
+                <td>
+                    @item.ToString("dddd")
+                </td>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var time in Model.Times)
+        {
+            <tr>
+                <td>@time</td>
+                @foreach (var date in Model.Dates)
+                {
+                    <td align="center" valign="middle">
+                        
+                        @{
+                            DateTime slotDate = DateTime.Parse(date.ToShortDateString() + " " + time);
+
+                            if (Model.Slots.ContainsKey(slotDate))
+                            {
+                                var slot = Model.Slots[slotDate];
+                                if (slot.Status == 4)
+                                {                                    
+                                    <div class="btn-group dropdown">
+                                        <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="background-color:@Model.NotAvailableColor;"><i class="fa fa-calendar-check-o"></i></button>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">
+                                            <li role="menuitem"><a href="javascript:void(0)" onclick="SetAvailable(@slot.Id)">Set Available</a></li>                                            
+                                        </ul>
+                                    </div>                                    
+                                }
+                                else if (slot.Status == 3)
+                                {
+                                    <button class="btn btn-sm" style="background-color:@Model.BookedColor;"><i class="fa fa-calendar-check-o"></i></button>
+                                }
+                            }
+                            else
+                            {   
+                                <div class="btn-group dropdown">
+                                    <button class="btn btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="background-color:@Model.AvailableColor;"><i class="fa fa-calendar-check-o"></i></button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="btn-append-to-body">
+                                        <li role="menuitem"><a href="javascript:void(0)" onclick="SetUnavailable('@(date.ToShortDateString()+" "+time)', 4)">Set Un-Available</a></li>
+                                    </ul>
+                                </div>
+                            }
+                        }
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function SetUnavailable(date, status) {
+
+        var data = {
+            date: date,
+            status: status,
+            adviserId: '@Model.AdviserId'
+        };
+
+
+        abp.ui.setBusy();
+
+        $.post("/api/services/app/slot/create", data).then(function (response) {
+            reloadSlots();
+        });
+    }
+
+    function SetAvailable(id) {
+        var data = {
+            id: id
+        };
+
+        abp.ui.setBusy();
+
+        $.post("/api/services/app/slot/delete", data).then(function () {
+            reloadSlots();
+        })
+    }
+
+    function reloadSlots() {
+        var slotsData = {
+                startDate: '@Model.Dates.FirstOrDefault().ToShortDateString()',
+                endDate: '@Model.Dates[6].ToShortDateString()',
+                adviserId: '@Model.AdviserId'
+            };
+
+            $.post("/adviser/GetAppointmentSlots", slotsData).then(function (response) {
+                $("#appointmentSlotsBody").html(response);
+                abp.ui.clearBusy();
+            })
+    }
+</script>

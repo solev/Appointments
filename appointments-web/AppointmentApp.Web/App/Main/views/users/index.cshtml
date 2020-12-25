@@ -1,0 +1,11 @@
+﻿<div ng-controller="app.views.users.index as vm">
+    <section class="content-header">
+        <h1>@L("Users") <small>Manage users and permissions</small></h1>
+    </section>
+    <section class="content">
+        <div class="clearfix">
+            <button ng-click="vm.openUserCreationModal()" class="btn btn-default btn-flat pull-right margin"><i class="fa fa-plus"></i>&nbsp; @L("CreateNewUser")</button>
+        </div>
+        <custom-table properties="tableProperties"></custom-table>
+    </section>
+</div>

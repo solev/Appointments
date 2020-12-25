@@ -1,0 +1,94 @@
+﻿<div class="box">
+    <div class="box-header">
+        <h3 class="box-title col-xs-12 col-lg-4 col-md-5">
+            Show <select class="form-control input-sm" style="display:initial;width:initial;margin:0 10px;" ng-model="ItemsPerPage" ng-options="item for item in PageNumbers" ng-change="getData()"></select> results
+        </h3>
+        <div class="input-group col-lg-3 col-md-6 col-sm-12 col-xs-12 pull-right">
+            <input type="text" name="table_search" class="form-control input-sm pull-right" placeholder="Search" ng-model="Search" ng-keypress="($event.which === 13)?getData():false">
+            <div class="input-group-btn">
+                <button class="btn btn-sm btn-default" ng-click="getData()"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover dataTable">
+                        <thead>
+                            <tr>
+                                <th nowrap>Actions</th>
+                                <th ng-repeat="col in columns" ng-class="{'sorting_asc': CurrentSort == firstUC(col.value), 'sorting_desc':CurrentSort == firstUC(col.value)+' desc','sorting':CurrentSort!=firstUC(col.value) && CurrentSort!=firstUC(col.value)+' desc'}"
+                                    ng-click="SortOrder(col.value, col.value+' desc')" nowrap>
+                                    {{col.heading}}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in data" ng-class="{'active': selectedItem == item}" @*ng-click="selectItem(item)"*@>
+                                @*<td>
+                                        <div class="btn-group" uib-dropdown dropdown-append-to-body>
+                                            <button id="btn-append-to-body" class="btn btn-block bg-maroon btn-xs" uib-dropdown-toggle><i class="fa fa-cog"></i> Actions  <i class="fa fa-caret-down"></i></button>
+                                            <ul class="dropdown-menu" role="menu" uib-dropdown-menu aria-labelledby="btn-append-to-body">
+                                                <li role="menuitem" ng-if="hasPermission('@SiGotvime.Authorization.PermissionNames.Administration_UserManagement_EditUser')"><a href="javascript:void(0)" ng-click="EditUser(user)">Edit</a></li>
+                                                <li role="menuitem" ng-if="hasPermission('@SiGotvime.Authorization.PermissionNames.Administration_UserManagement_ChangePermissions')"><a href="javascript:void(0)" ng-click="EditPermissions(user)">Permissions</a></li>
+                                                <li role="menuitem" ng-if="hasPermission('@SiGotvime.Authorization.PermissionNames.Administration_UserManagement_LoginAsUser')"><a href="javascript:void(0)">Login as this User</a></li>
+                                                <li class="divider" ng-if="hasPermission('@SiGotvime.Authorization.PermissionNames.Administration_UserManagement_DeleteUser')"></li>
+                                                <li role="menuitem" ng-if="hasPermission('@SiGotvime.Authorization.PermissionNames.Administration_UserManagement_DeleteUser')"><a href="javascript:void(0)" ng-click="DeleteUser(user)">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>*@
+                                
+                                <td>
+                                    <div class="btn-group" uib-dropdown dropdown-append-to-body>
+                                        <button id="btn-append-to-body" class="btn btn-block bg-maroon btn-xs" uib-dropdown-toggle><i class="fa fa-cog"></i> Actions  <i class="fa fa-caret-down"></i></button>
+                                        <ul class="dropdown-menu" role="menu" uib-dropdown-menu aria-labelledby="btn-append-to-body">
+                                            <li role="menuitem" ><a href="javascript:void(0)" ng-click="EditUser(item)">Edit</a></li>                                            
+                                            <li role="menuitem"><a href="javascript:void(0)" ng-click="sendMessage(item)">Send a message</a></li>
+                                            <li class="divider"></li>
+                                            <li role="menuitem"><a href="javascript:void(0)" ng-click="DeleteUser(item)">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                
+                                <td nowrap ng-repeat="col in columns">
+                                    {{ !col.isBool ? item[col.value] : item[col.value] ? 'Yes':'No'}}
+                                </td>
+
+                                @*<td nowrap><span class="label" ng-class="{'label-success':user.isActive,'label-danger':!user.isActive}">{{user.isActive?"Yes":"No"}}</span></td>*@
+                            </tr>
+                            <tr ng-if="data.length < 1">
+                                <td colspan="9">No records found!</td>
+                            </tr>
+                        </tbody>
+
+                        @*<tfoot>
+                                <tr>
+                                    <th nowrap>@L("Username")</th>
+                                    <th nowrap>@L("FirstName")</th>
+                                    <th nowrap>@L("LastName")</th>
+                                    <th nowrap>@L("EmailAddress")</th>
+                                    <th nowrap>@L("Active")</th>
+
+                                </tr>
+                            </tfoot>*@
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+        <div class="row">
+            <div class="col-sm-7">
+                <uib-pagination ng-model="CurrentPage"
+                                total-items="TotalCount"
+                                force-ellipses="true"
+                                boundary-links="true"
+                                max-size="5"
+                                items-per-page="ItemsPerPage"
+                                ng-change="getData()"></uib-pagination>
+            </div>
+        </div>
+    </div><!-- box-footer -->
+</div><!-- /.box -->

@@ -1,0 +1,46 @@
+﻿<section class="content-header">
+    <h1>Advisers <small>Manage advisers in the application</small></h1>
+</section>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>
+                            Actions
+                        </td>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Phone Number
+                        </td>
+                        <td>
+                            Company Name
+                        </td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in advisers">
+                        <td>
+                            <div class="btn-group" uib-dropdown dropdown-append-to-body>
+                                <button id="btn-append-to-body" class="btn btn-block bg-maroon btn-xs" uib-dropdown-toggle><i class="fa fa-cog"></i> Actions  <i class="fa fa-caret-down"></i></button>
+                                <ul class="dropdown-menu" role="menu" uib-dropdown-menu aria-labelledby="btn-append-to-body">
+                                    <li role="menuitem"><a href="#/adviserProfile/{{item.id}}">Appointment Slots</a></li>
+                                    <li role="menuitem"><a href="javascript:void(0)" ng-click="Edit(item)">Edit</a></li>                                    
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="javascript:void(0)" ng-click="Delete(item)">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>{{item.fullName}}</td>
+                        <td>{{item.phoneNumber}}</td>
+                        <td>{{item.companyName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

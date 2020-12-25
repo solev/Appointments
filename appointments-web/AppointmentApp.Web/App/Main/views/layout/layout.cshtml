@@ -1,0 +1,92 @@
+﻿@using System.Threading
+@using System.Web.Optimization
+@using Abp.Timing
+@using Abp.Web.Mvc.Extensions
+@{
+    SetAntiForgeryCookie();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Appointment App</title>
+
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    @Styles.Render("~/Bundles/App/vendor/css")
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    @Styles.Render("~/Bundles/App/Main/css")
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="@Url.Content("~/Scripts/others/html5shiv.js")"></script>
+        <script src="@Url.Content("~/Scripts/others/respond.min.js")"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini fixed">
+
+    <div ng-app="app" class="wrapper">
+
+        <div ng-controller="app.views.layout as vm">
+            <div ng-include="'/App/Main/views/layout/header.cshtml'"></div>
+            <div class="content-wrapper">
+                <div class="angular-animation-container row">
+                    <div ui-view class="shuffle-animation col-xs-12"></div>
+                </div>
+            </div>
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    <b>Version</b> 0.1
+                </div>
+                <strong>Copyright &copy; 2017 <a href="javascript:void(0)">Appointment App</a>.</strong> All rights reserved.
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        window.paceOptions = {
+            //ajax: {
+            //    trackMethods: ["GET", "POST"],
+            //    trackWebSockets: false
+            //},
+            document: true,
+            restartOnPushState: true,
+            restartOnRequestAfter: true,
+            ajax: false
+        };
+    </script>
+
+    @Scripts.Render("~/Bundles/App/vendor/js")
+    <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+    </script>
+
+    <script>
+        //Localizing momentjs
+        moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+    </script>
+
+    <!-- SignalR scripts -->
+    <script src="~/signalr/hubs"></script>
+    @Html.IncludeScript("~/Abp/Framework/scripts/libs/abp.signalr.js")
+
+    <script src="~/Theme/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/api/AbpServiceProxies/GetAll?type=angular&v=@(Clock.Now.Ticks)"></script>
+    <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+
+    @Scripts.Render("~/Bundles/App/Main/js")
+</body>
+</html>
